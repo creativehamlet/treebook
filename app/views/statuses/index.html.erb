@@ -11,8 +11,10 @@
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
     <span class="admin">
-      | <%= link_to "Edit", edit_status_path(status) %> |
-      <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this status?"} %>
+      <div class="btn-group">
+        <button class="button"><%= link_to "Edit", edit_status_path(status) %></button>
+        <button class="button"><%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this status?"} %></button>
+      </div>
   </div>
 </div>
 <% end %>
