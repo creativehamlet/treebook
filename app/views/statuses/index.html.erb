@@ -6,15 +6,14 @@
 
 <% @statuses.each do |status| %>
 <div class="status">
-  <strong><%= status.name %></strong>
+  <strong><%= status.user.full_name %></strong>
   <p><%= status.content %></p>
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
-    <span class="admin">
-      <div class="btn-group">
-        <button class="button"><%= link_to "Edit", edit_status_path(status) %></button>
-        <button class="button"><%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this status?"} %></button>
-      </div>
+    <span class="admin btn-group">
+      <span class="btn"><%= link_to "Edit", edit_status_path(status) %></span>
+      <span class="btn"><%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure you want to delete this status?"} %></span>
+    </span>
   </div>
 </div>
 <% end %>
