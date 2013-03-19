@@ -3,3 +3,9 @@ brad:
  last_name: "Sosnowski"
  email: "b@portf.com"
  profile_name: "creatiu"
+
+sara:
+ first_name: "Sara"
+ last_name: "Martinez"
+ email: "sara@pixelscut.com"
+ profile_name: "saramartinez"
